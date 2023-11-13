@@ -123,8 +123,12 @@ iframe {
 }
 .header .profile-image {
   margin-right: 30px;
-  width: 180px;
+  width: 180px; 
   height: 180px;
+
+  background-size: contain;
+  background-repeat: no-repeat; 
+  
  -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
