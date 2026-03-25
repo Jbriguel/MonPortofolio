@@ -426,7 +426,7 @@ main {
 }
 
 .social-item .social-link {
-  color: var(--light-gray-70);
+  color: var(--white-1);
   font-size: 18px;
 }
 
@@ -2023,7 +2023,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   ================================ */
   .lang-toggle-btn {
     background: var(--bg-gradient-yellow-1);
-    color: var(--smoky-black);
+    color: var(--white-1);
     font-size: var(--fs-7);
     font-weight: var(--fw-600);
     padding: 5px 12px;
