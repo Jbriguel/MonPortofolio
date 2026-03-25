@@ -48,11 +48,11 @@
         <div class="info-content">
           <h1 class="name" title="Joseph-Briguel DOSSOU-YOVO">Joseph-Briguel <br /> DOSSOU-YOVO</h1>
 
-          <p class="title">Développeur Mobile & Front-End</p>
+          <p class="title" data-i18n="sidebar-title">Lead Développeur Mobile</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Voir Contacts</span>
+          <span data-i18n="sidebar-btn">Voir Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -72,7 +72,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <p class="contact-title" data-i18n="contact-label-email">Email</p>
 
               <a href="mailto:dossouyovojoseph04@gmail.com" class="contact-link">dossouyovojoseph04@gmail.com</a>
             </div>
@@ -86,10 +86,10 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Téléphone</p>
+              <p class="contact-title" data-i18n="contact-label-phone">Téléphone</p>
 
-              <a href="tel:+223655670575" class="contact-link">(+223) 65567057</a>
-              <a href="tel:+22367734742" class="contact-link">(+223) 67734742</a>
+              <a href="tel:+22367734742" class="contact-link">(+223) 67 73 47 42</a>
+              <a href="tel:+22375143651" class="contact-link">(+223) 75 14 36 51</a>
             </div>
 
           </li>
@@ -113,7 +113,7 @@
               <ion-icon name="location-outline"></ion-icon>
             </div>
             <div class="contact-info">
-              <p class="contact-title">Localisation</p>
+              <p class="contact-title" data-i18n="contact-label-location">Localisation</p>
               <address>Bamako, Mali</address>
             </div>
           </li>
@@ -143,6 +143,26 @@
 
         </ul>
 
+        <div class="separator"></div>
+
+        <div class="interests-box">
+          <h4 class="interests-title" data-i18n="interests-title">Centres d'intérêts</h4>
+          <ul class="interests-list">
+            <li class="interests-item">
+              <ion-icon name="football-outline"></ion-icon>
+              <span data-i18n="interest-sport">Sport</span>
+            </li>
+            <li class="interests-item">
+              <ion-icon name="shield-checkmark-outline"></ion-icon>
+              <span data-i18n="interest-cyber">Cybersécurité</span>
+            </li>
+            <li class="interests-item">
+              <ion-icon name="hardware-chip-outline"></ion-icon>
+              <span data-i18n="interest-ai">Intelligence Artificielle</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
     </aside>
@@ -166,15 +186,15 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Informations</button>
+            <button class="navbar-link  active" data-nav-link data-page-link="informations" data-i18n="nav-about">Informations</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-page-link="resume" data-i18n="nav-resume">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link data-page-link="portfolio" data-i18n="nav-portfolio">Portfolio</button>
           </li>
 
           <!-- <li class="navbar-item">
@@ -182,10 +202,12 @@
           </li> -->
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link data-page-link="contact" data-i18n="nav-contact">Contact</button>
           </li>
 
         </ul>
+
+        <button class="lang-toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
 
       </nav>
 
@@ -200,13 +222,13 @@
       <article class="informations  active" data-page="informations">
 
         <header>
-          <h2 class="h2 article-title">Informations</h2>
+          <h2 class="h2 article-title" data-i18n="nav-about">Informations</h2>
         </header>
 
         <div class="profile-content pull-right " style="margin-bottom: 20px;">
           <button class="form-btn" onclick="window.location.href='assets/images/projects/CV fr. DOSSOU-YOVO Joseph-Briguel.pdf'" download="CV-DOSSOU-YOVO Joseph-Briguel.pdf">
             <ion-icon name="download-outline"></ion-icon>
-            <span>Télécharger mon CV (French)</span>
+            <span data-i18n="cv-download">Télécharger mon CV (French)</span>
           </button>
            
           <!-- <a class="btn btn-primary" href="assets/images/Cv .en. de DOSSOU-YOVO Joseph-Briguel.pdf"
@@ -214,23 +236,41 @@
             resume (English)</a> -->
         </div>
 
+        <!-- Chiffres clés -->
+        <!-- <section class="stats-section">
+          <ul class="stats-list">
+            <li class="stats-item">
+              <div class="stats-number">4+</div>
+              <p class="stats-label">Ans d'expérience</p>
+            </li>
+            <li class="stats-item">
+              <div class="stats-number">10+</div>
+              <p class="stats-label">Projets réalisés</p>
+            </li>
+            <li class="stats-item">
+              <div class="stats-number">3</div>
+              <p class="stats-label">Certifications AWS</p>
+            </li>
+            <li class="stats-item">
+              <div class="stats-number">2</div>
+              <p class="stats-label">Postes Lead</p>
+            </li>
+          </ul>
+        </section> -->
+
         <section class="informations-text">
-          Je suis un développeur mobile passionné, spécialisé dans la création d'applications innovantes et performantes
-          avec Flutter. J'aime relever des défis techniques et contribuer à des projets ambitieux.
+          <p data-i18n="bio-1">
+            Lead Mobile Developer spécialisé en Flutter avec une forte expertise en architecture modulaire, performance
+            mobile et intégration API. Expérience confirmée dans la conception UI/UX, le pilotage d'équipes techniques,
+            et le développement d'applications complexes allant de la maquette à la mise en production.
           </p>
-          <p>
-            Mon expertise inclut le développement d'applications Android et iOS, l'intégration d'API, l'utilisation de
-            Firebase pour la gestion des données, et la conception de maquettes avec Figma. Je suis également compétent
-            en réseaux informatiques et en cloud computing (AWS).
-          </p>
-          <p>
-            Je suis enthousiaste à l'idée de contribuer à des projets ambitieux et de jouer un rôle actif dans
-            l'évolution du développement mobile de demain.
+          <p data-i18n="bio-2">
+            Approche orientée scalabilité, sécurité et qualité logicielle.
           </p>
         </section>
         <!-- Services Section -->
         <section class="service">
-          <h3 class="h3 service-title">Ce que je fais</h3>
+          <h3 class="h3 service-title" data-i18n="services-title">Ce que je fais</h3>
 
           <ul class="service-list">
             <li class="service-item">
@@ -238,8 +278,8 @@
                 <img src="./assets/images/icon-dev.svg" alt="Développement mobile icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Développement Mobile</h4>
-                <p class="service-item-text">
+                <h4 class="h4 service-item-title" data-i18n="service-mobile-title">Développement Mobile</h4>
+                <p class="service-item-text" data-i18n="service-mobile-text">
                   Conception et développement d'applications mobiles cross-platform avec Flutter.
                 </p>
               </div>
@@ -250,8 +290,8 @@
                 <img src="./assets/images/icon-design.svg" alt="Design icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Conception de Maquettes</h4>
-                <p class="service-item-text">
+                <h4 class="h4 service-item-title" data-i18n="service-design-title">Conception de Maquettes</h4>
+                <p class="service-item-text" data-i18n="service-design-text">
                   Création de maquettes interactives avec Figma pour une expérience utilisateur optimale.
                 </p>
               </div>
@@ -259,12 +299,12 @@
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Cloud icon" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="Architecture icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Computing</h4>
-                <p class="service-item-text">
-                  Gestion de services cloud avec AWS, y compris les bases de données et le stockage.
+                <h4 class="h4 service-item-title" data-i18n="service-arch-title">Architecture Applicative</h4>
+                <p class="service-item-text" data-i18n="service-arch-text">
+                  Mise en place de Clean Architecture, modularisation et composants réutilisables pour des apps scalables.
                 </p>
               </div>
             </li>
@@ -273,8 +313,8 @@
                 <img src="./assets/images/icon-dev.svg" alt="API icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Intégration d'API & Backend</h4>
-                <p class="service-item-text">
+                <h4 class="h4 service-item-title" data-i18n="service-api-title">Intégration d'API & Backend</h4>
+                <p class="service-item-text" data-i18n="service-api-text">
                   Intégration d'API externes, SDK et services tiers pour connecter des applications à des
                   fonctionnalités avancées
                 </p>
@@ -418,7 +458,7 @@
 
       <article class="resume" data-page="resume">
         <header>
-          <h2 class="h2 article-title">CV</h2>
+          <h2 class="h2 article-title" data-i18n="resume-title">CV</h2>
         </header>
 
         <!-- Section Éducation -->
@@ -427,14 +467,14 @@
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-            <h3 class="h3">Éducation</h3>
+            <h3 class="h3" data-i18n="education-title">Éducation</h3>
           </div>
 
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Formation Amazon Web Services (AWS)</h4>
-              <span>Mars - Juillet 2023</span>
-              <p class="timeline-text">
+              <h4 class="h4 timeline-item-title" data-i18n="education-1-title">Formation Amazon Web Services (AWS)</h4>
+              <span data-i18n="education-1-period">Mars - Juillet 2023</span>
+              <p class="timeline-text" data-i18n-html="education-1-text">
                 Orange Digital Center, Bamako, Mali.<br>
                 Compétences acquises : Programmation Python, Bases de données, Réseautage, Introduction à la sécurité,
                 Cloud Computing.
@@ -442,10 +482,10 @@
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Licence en Ingénierie des Systèmes, Réseaux Informatiques et Sécurité
+              <h4 class="h4 timeline-item-title" data-i18n="education-2-title">Licence en Ingénierie des Systèmes, Réseaux Informatiques et Sécurité
               </h4>
-              <span>2021 – 2022</span>
-              <p class="timeline-text">
+              <span data-i18n="education-2-period">2021 – 2022</span>
+              <p class="timeline-text" data-i18n-html="education-2-text">
                 Institut Supérieur de Technologies Appliquées (Technolab ISTA), Bamako, Mali.<br>
                 Spécialisation en réseaux informatiques et sécurité, mise en réseau de systèmes informatiques et
                 télécommunications.
@@ -453,10 +493,10 @@
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Diplôme Universitaire de Technologie (DUT), Electronique et Maintenance
+              <h4 class="h4 timeline-item-title" data-i18n="education-3-title">Diplôme Universitaire de Technologie (DUT), Electronique et Maintenance
                 Informatique</h4>
-              <span>2019 – 2021</span>
-              <p class="timeline-text">
+              <span data-i18n="education-3-period">2019 – 2021</span>
+              <p class="timeline-text" data-i18n="education-3-text">
                 Institut Supérieur de Technologies Appliquées (Technolab ISTA), Bamako, Mali.
               </p>
             </li>
@@ -469,24 +509,24 @@
             <div class="icon-box">
               <ion-icon name="briefcase-outline"></ion-icon>
             </div>
-            <h3 class="h3">Expérience Professionnelle</h3>
+            <h3 class="h3" data-i18n="experience-title">Expérience Professionnelle</h3>
           </div>
 
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Lead Développeur Mobile – Brandoper AI</h4>
-              <span>Mai 2025 – Présent</span>
-              <p class="timeline-text">
-                Développement d’applications mobiles<br>
-                Conception de maquettes et à la conception de plusieurs projets.<br>
-                Implication dans l’UI/UX, l’intégration d’APIs et l’optimisation des performances.<br>
+              <h4 class="h4 timeline-item-title" data-i18n="exp-1-title">Lead Développeur Mobile – SUPERBRAND</h4>
+              <span data-i18n="exp-1-period">Mai 2025 – Présent</span>
+              <p class="timeline-text" data-i18n-html="exp-1-text">
+                Pilotage technique de l'équipe mobile (Flutter / Android & iOS).<br>
+                Conception UI/UX et architecture applicative (Clean Architecture, modularisation).<br>
+                Optimisation des performances, sécurité et gestion des releases Android & iOS.<br>
               </p>
             </li>
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Lead Développeur Flutter - Korix Africa</h4>
-              <span>Mai 2024 – 10 Février 2025</span>
-              <p class="timeline-text">
-                Supervision d’une équipe de développeurs et optimisation des performances Flutter.<br>
+              <h4 class="h4 timeline-item-title" data-i18n="exp-2-title">Lead Développeur Flutter – Korix Africa</h4>
+              <span data-i18n="exp-2-period">2023 – 2025</span>
+              <p class="timeline-text" data-i18n-html="exp-2-text">
+                Supervision d'une équipe de développeurs et optimisation des performances Flutter.<br>
                 Décisions techniques sur l’architecture et intégration avancée d’API & Firebase.<br>
                 Collaboration avec les équipes produit et design pour améliorer l’expérience utilisateur.<br>
                 <strong>Projets réalisés :</strong><br>
@@ -503,45 +543,65 @@
             <div class="icon-box">
               <ion-icon name="briefcase-outline"></ion-icon>
             </div>
-            <h3 class="h3">Missions Freelance</h3>
+            <h3 class="h3" data-i18n="freelance-title">Missions Freelance</h3>
           </div>
 
           
 
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">FlyBagage – Application mobile</h4>
-              <span>2025</span>
-              <p class="timeline-text">
-                Intervention sur l’application mobile FlyBagage : corrections de bugs, création de nouvelles interfaces et fonctionnalités, et optimisation des modules existants pour de meilleures performances.<br>
+              <h4 class="h4 timeline-item-title" data-i18n="freelance-1-title">FlyBagage – Application mobile</h4>
+              <span data-i18n="freelance-1-period">2025</span>
+              <p class="timeline-text" data-i18n-html="freelance-1-text">
+                Intervention sur l'application mobile FlyBagage : corrections de bugs, création de nouvelles interfaces et fonctionnalités, et optimisation des modules existants pour de meilleures performances.<br>
                 <a href="https://flybagage.com" target="_blank">flybagage.com</a>
               </p>
             </li>
             
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Développeur Mobile – Application Karrou</h4>
-              <span>2024 – 2025</span>
-              <p class="timeline-text">
+              <h4 class="h4 timeline-item-title" data-i18n="freelance-2-title">Développeur Mobile – Application Karrou</h4>
+              <span data-i18n="freelance-2-period">2024 – 2025</span>
+              <p class="timeline-text" data-i18n-html="freelance-2-text">
                 Développement d'une application mobile de rencontres avec Flutter, BLoC et intégration d'API REST.<br>
                 Mise en place d'un système de messagerie via polling en l'absence de WebSockets.
               </p>
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Projet de Gestion Immobilière - Banque BMS</h4>
-              <span>2023</span>
-              <p class="timeline-text">
+              <h4 class="h4 timeline-item-title" data-i18n="freelance-3-title">Projet de Gestion Immobilière - Banque BMS</h4>
+              <span data-i18n="freelance-3-period">2023</span>
+              <p class="timeline-text" data-i18n="freelance-3-text">
                 Développement d'une application de gestion immobilière avec intégration d'API pour la synchronisation
                 des données.
               </p>
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Projet de Localisation de Produits Pharmaceutiques</h4>
-              <span>2022</span>
-              <p class="timeline-text">
+              <h4 class="h4 timeline-item-title" data-i18n="freelance-4-title">Projet de Localisation de Produits Pharmaceutiques</h4>
+              <span data-i18n="freelance-4-period">2022</span>
+              <p class="timeline-text" data-i18n="freelance-4-text">
                 Création d'une application facilitant la recherche et la localisation de produits pharmaceutiques via
                 intégration d'API.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Section Références -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+            <h3 class="h3" data-i18n="references-title">Références</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Issif Diawara</h4>
+              <span data-i18n="ref-1-role">Co-founder &amp; COO – Wassa Technologie</span>
+              <p class="timeline-text">
+                <a href="tel:+33783026767" class="contact-link">+33 7 83 02 67 67</a>
+                <a href="mailto:idiawara@wassatechnologie.com" class="contact-link">idiawara@wassatechnologie.com</a>
               </p>
             </li>
           </ol>
@@ -553,14 +613,14 @@
             <div class="icon-box">
               <ion-icon name="folder-open-outline"></ion-icon>
             </div>
-            <h3 class="h3">Projets Personnels</h3>
+            <h3 class="h3" data-i18n="personal-title">Projets Personnels</h3>
           </div>
 
           <ol class="timeline-list">
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Développeur et Concepteur - Erudite (Projet Personnel)</h4>
-              <span>2023 – Présent</span>
-              <p class="timeline-text">
+              <h4 class="h4 timeline-item-title" data-i18n="personal-1-title">Développeur et Concepteur - Erudite (Projet Personnel)</h4>
+              <span data-i18n="personal-1-period">2023 – Présent</span>
+              <p class="timeline-text" data-i18n-html="personal-1-text">
                 Création d'une application éducative avec des cours interactifs et des quiz.<br>
                 Intégration de Firebase pour la gestion des données et l'authentification.<br>
                 Actuellement en phase de test avec plus de 30 utilisateurs.
@@ -571,13 +631,14 @@
 
         <!-- Section Compétences -->
         <section class="skill">
-          <h3 class="h3 skills-title">Mes Compétences</h3>
+          <h3 class="h3 skills-title" data-i18n="skills-title">Mes Compétences</h3>
           <!-- Liste des Compétences -->
           <div class="skills-list">
             <div class="skill-category">
-              <h4 class="h4 skill-category-title">Développement Mobile</h4>
+              <h4 class="h4 skill-category-title" data-i18n="skill-cat-mobile">Développement Mobile</h4>
               <ul class="skill-items">
                 <li class="skill-item">Flutter & Dart</li>
+                <li class="skill-item">Clean Architecture & Modularisation</li>
                 <li class="skill-item">Intégration d'API REST</li>
                 <li class="skill-item">Firebase (Authentification, Firestore)</li>
                 <li class="skill-item">Gestion d'état avec BLoC</li>
@@ -585,7 +646,7 @@
             </div>
 
             <div class="skill-category">
-              <h4 class="h4 skill-category-title">Développement Web</h4>
+              <h4 class="h4 skill-category-title" data-i18n="skill-cat-web">Développement Web</h4>
               <ul class="skill-items">
                 <li class="skill-item">JavaScript</li>
                 <li class="skill-item">Vue.js</li>
@@ -595,20 +656,41 @@
             </div>
 
             <div class="skill-category">
-              <h4 class="h4 skill-category-title">Cloud & Outils</h4>
+              <h4 class="h4 skill-category-title" data-i18n="skill-cat-cloud">Cloud & Outils</h4>
               <ul class="skill-items">
                 <li class="skill-item">AWS (Cloud Practitioner)</li>
                 <li class="skill-item">Git & GitHub</li>
-                <li class="skill-item">Linux</li>
+                <li class="skill-item">Linux & Réseaux</li>
+                <li class="skill-item">Power Platform</li>
                 <li class="skill-item">Conception de maquettes (Figma)</li>
               </ul>
             </div>
           </div>
 
 
-          <!-- Section Langages de Programmation -->
+          <!-- Section Certifications -->
+          <div class="certifications-grid">
+            <h4 class="h4 languages-title" data-i18n="cert-title">Certifications</h4>
+            <ul class="skill-items">
+              <li class="skill-item">CCNA – Introduction to Networks</li>
+              <li class="skill-item">AWS re/Start Graduate</li>
+              <li class="skill-item">AWS Certified Cloud Practitioner</li>
+              <li class="skill-item">AWS Educate – Serverless</li>
+            </ul>
+          </div>
+
+          <!-- Section Langues -->
+          <div class="languages-section">
+            <h4 class="h4 languages-title" data-i18n="lang-section-title">Langues</h4>
+            <ul class="skill-items">
+              <li class="skill-item" data-i18n="lang-fr">Français – courant</li>
+              <li class="skill-item" data-i18n="lang-en">Anglais – technique / professionnel</li>
+            </ul>
+          </div>
+
+        <!-- Section Langages de Programmation -->
           <div class="languages-grid">
-            <h4 class="h4 languages-title">Langages de Programmation</h4>
+            <h4 class="h4 languages-title" data-i18n="prog-lang-title">Langages de Programmation</h4>
             <div class="grid-container">
               <div class="language-item">
                 <img src="./assets/images/icon-flutter.png" alt="Flutter" width="50">
@@ -656,7 +738,7 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title" data-i18n="portfolio-title">Portfolio</h2>
         </header>
 
         <section class="projects">
@@ -664,19 +746,19 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn data-i18n="filter-all">All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn data-i18n="filter-webdesign">Web design</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn data-i18n="filter-apps">Applications</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn data-i18n="filter-webdev">Web development</button>
             </li>
 
           </ul>
@@ -864,6 +946,108 @@
                 <p class="project-category">Applications</p>
               </a>
             </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://flybagage.com" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/kougne-banner.png" alt="FlyBagage" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">FlyBagage</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://future-concept.net/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/futureconcept.png" alt="Future Concept" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Future Concept</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://saveur-96-fresh-pages.vercel.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/saveur.png" alt="Saveur 96" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Saveur 96</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://etef-mali.vercel.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/etef.png" alt="ETEF Mali" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ETEF Mali</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://aishashop-lake.vercel.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/shop.png" alt="Aisha Shop" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Aisha Shop</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <!-- <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="./assets/images/projects/kougne.png" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/kougne.png" alt="Kougne" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Kougne</h3>
+
+                <p class="project-category">Applications</p>
+                
+              </a>
+            </li> -->
 
             <li class="project-item  active" data-filter-item data-category="applications">
               <a href="./assets/images/projects/carburant_Maquette.png" target="_blank">
@@ -1118,7 +1302,7 @@
       -->
       <article class="contact" data-page="contact">
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title" data-i18n="contact-page-title">Contact</h2>
         </header>
 
         <!-- Section Carte (Optionnelle) -->
@@ -1134,19 +1318,19 @@
 
         <!-- Section Formulaire de Contact -->
         <section class="contact-form">
-          <h3 class="h3 form-title">Formulaire de Contact</h3>
+          <h3 class="h3 form-title" data-i18n="form-title">Formulaire de Contact</h3>
 
           <form action="#" class="form" data-form>
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Nom complet" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Adresse email" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Nom complet" required data-form-input data-i18n-placeholder="form-name">
+              <input type="email" name="email" class="form-input" placeholder="Adresse email" required data-form-input data-i18n-placeholder="form-email">
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Votre message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Votre message" required data-form-input data-i18n-placeholder="form-message"></textarea>
 
             <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Envoyer</span>
+              <span data-i18n="form-send">Envoyer</span>
             </button>
           </form>
         </section>
@@ -1164,6 +1348,7 @@
   <!--
     - custom js link
   -->
+  <script src="./assets/js/translations.js"></script>
   <script src="./assets/js/script.js"></script>
 
   <!--
