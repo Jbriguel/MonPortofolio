@@ -1,59 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Joseph-Briguel DOSSOU-YOVO</title>
+  <title>Joseph-Briguel DOSSOU-YOVO | Lead Développeur Mobile (Flutter & Native)</title>
+  <meta name="description" content="Portfolio professionnel de Joseph-Briguel DOSSOU-YOVO, Lead Développeur Mobile spécialisé Flutter, Clean Architecture, UI/UX et intégration API.">
 
-  <!--
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- Background Animé Style Google Antigravity -->
+  <div class="antigravity-bg-wrapper" aria-hidden="true">
+    <canvas id="antigravityCanvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+  </div>
 
+  <!-- #MAIN CONTAINER -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- #SIDEBAR -->
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
 
-        <figure class="avatar-box">
-          <img src="assets/images/photo_profil.PNG" alt="Joseph-Briguel DOSSOU-YOVO" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Joseph-Briguel DOSSOU-YOVO">Joseph-Briguel <br /> DOSSOU-YOVO</h1>
-
-          <p class="title" data-i18n="sidebar-title">Lead Développeur Mobile</p>
+        <div class="avatar-wrapper">
+          <figure class="avatar-box">
+            <img src="assets/images/photo_profil.PNG" alt="Joseph-Briguel DOSSOU-YOVO" width="120">
+          </figure>
+          <div class="status-badge" title="Disponible pour opportunités">
+            <span class="status-dot"></span>
+            <span class="status-text" data-i18n="status-badge">Disponible pour opportunités</span>
+          </div>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span data-i18n="sidebar-btn">Voir Contacts</span>
+        <div class="info-content">
+          <h1 class="name" title="Joseph-Briguel DOSSOU-YOVO">Joseph-Briguel <br>DOSSOU-YOVO</h1>
+          <p class="title" data-i18n="sidebar-title">Tech Lead Mobile</p>
+          <p class="subtitle" data-i18n="sidebar-subtitle">Mobile · Web · UI/UX · Product Development</p>
+          <span class="slogan-pill" data-i18n="sidebar-slogan">I design. I build. I ship.</span>
+        </div>
 
+        <button class="info_more-btn" data-sidebar-btn aria-label="Afficher ou masquer les contacts">
+          <span data-i18n="sidebar-btn">Voir Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
 
@@ -63,50 +65,43 @@
 
         <div class="separator"></div>
 
+        <!-- Boutons Téléchargement CV (FR & EN) -->
+        <div class="sidebar-cv-box">
+          <a href="./assets/images/projects/CV fr. DOSSOU-YOVO Joseph-Briguel (1).pdf" class="sidebar-cv-btn primary" download="CV-Joseph-Briguel-FR.pdf">
+            <ion-icon name="download-outline"></ion-icon>
+            <span data-i18n="cv-fr-btn">CV Français</span>
+          </a>
+          <a href="./assets/images/projects/CV en. DOSSOU-YOVO Joseph-Briguel.pdf" class="sidebar-cv-btn secondary" download="CV-Joseph-Briguel-EN.pdf">
+            <ion-icon name="download-outline"></ion-icon>
+            <span data-i18n="cv-en-btn">CV English</span>
+          </a>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Coordonnées -->
         <ul class="contacts-list">
 
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title" data-i18n="contact-label-email">Email</p>
-
-              <a href="mailto:dossouyovojoseph04@gmail.com" class="contact-link">dossouyovojoseph04@gmail.com</a>
+              <a href="mailto:dossouyovojoseph04@gmail.com" class="contact-link" title="Envoyer un email">dossouyovojoseph04@gmail.com</a>
             </div>
-
           </li>
 
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title" data-i18n="contact-label-phone">Téléphone</p>
-
               <a href="tel:+22367734742" class="contact-link">(+223) 67 73 47 42</a>
               <a href="tel:+22375143651" class="contact-link">(+223) 75 14 36 51</a>
             </div>
-
           </li>
-
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li> -->
 
           <li class="contact-item">
             <div class="icon-box">
@@ -114,7 +109,7 @@
             </div>
             <div class="contact-info">
               <p class="contact-title" data-i18n="contact-label-location">Localisation</p>
-              <address>Bamako, Mali</address>
+              <address data-i18n="location-val">Bamako, Mali • Remote</address>
             </div>
           </li>
 
@@ -122,29 +117,38 @@
 
         <div class="separator"></div>
 
+        <!-- Réseaux Sociaux -->
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/joseph-dossou-yovo-1888bb194/" class="social-link" target="_blank">
+            <a href="https://www.linkedin.com/in/joseph-dossou-yovo-1888bb194/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
-            <a href="http://www.youtube.com/@jo.b6332" class="social-link" target="_blank">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/Jbriguel" class="social-link" target="_blank">
+            <a href="https://github.com/Jbriguel" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
+          <li class="social-item">
+            <a href="https://www.behance.net/josephdossou-" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Profil Behance (Designs & Maquettes)">
+              <ion-icon name="logo-behance"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.tiktok.com/@bady.dev" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Compte TikTok @bady.dev">
+              <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="http://www.youtube.com/@jo.b6332" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Chaîne YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
         </ul>
 
         <div class="separator"></div>
 
+        <!-- Centres d'intérêts -->
         <div class="interests-box">
           <h4 class="interests-title" data-i18n="interests-title">Centres d'intérêts</h4>
           <ul class="interests-list">
@@ -167,343 +171,136 @@
 
     </aside>
 
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
+    <!-- #MAIN CONTENT -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
+      <!-- #NAVBAR -->
       <nav class="navbar">
 
         <ul class="navbar-list">
-
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link data-page-link="informations" data-i18n="nav-about">Informations</button>
+            <button class="navbar-link active" data-nav-link data-page-link="informations" data-i18n="nav-about">Informations</button>
           </li>
-
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-page-link="resume" data-i18n="nav-resume">Resume</button>
+            <button class="navbar-link" data-nav-link data-page-link="resume" data-i18n="nav-resume">CV</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-page-link="portfolio" data-i18n="nav-portfolio">Portfolio</button>
           </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link data-page-link="contact" data-i18n="nav-contact">Contact</button>
           </li>
-
         </ul>
 
-        <button class="lang-toggle-btn" id="langToggle" onclick="toggleLang()">EN</button>
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Basculer entre thème clair et sombre">
+            <ion-icon name="moon-outline"></ion-icon>
+          </button>
+          <button class="lang-toggle-btn" id="langToggle" onclick="toggleLang()" aria-label="Changer de langue">EN</button>
+        </div>
 
       </nav>
 
-
-
-
-
-      <!--
-        - #Informations
-      -->
-      <!-- Resume/CV -->
-      <article class="informations  active" data-page="informations">
+      <!-- ================================
+           #SECTION INFORMATIONS
+      ================================ -->
+      <article class="informations active" data-page="informations">
 
         <header>
           <h2 class="h2 article-title" data-i18n="nav-about">Informations</h2>
         </header>
 
-        <div class="profile-content pull-right " style="margin-bottom: 20px;">
-          <button class="form-btn" onclick="window.location.href='assets/images/projects/CV fr. DOSSOU-YOVO Joseph-Briguel.pdf'" download="CV-DOSSOU-YOVO Joseph-Briguel.pdf">
-            <ion-icon name="download-outline"></ion-icon>
-            <span data-i18n="cv-download">Télécharger mon CV (French)</span>
-          </button>
-           
-          <!-- <a class="btn btn-primary" href="assets/images/Cv .en. de DOSSOU-YOVO Joseph-Briguel.pdf"
-            download="resume-DOSSOU-YOVO Joseph-Briguel.pdf" target="_blank"><i class="fa fa-download"></i>Download my
-            resume (English)</a> -->
-        </div>
-
-        <!-- Chiffres clés -->
-        <!-- <section class="stats-section">
-          <ul class="stats-list">
-            <li class="stats-item">
-              <div class="stats-number">4+</div>
-              <p class="stats-label">Ans d'expérience</p>
-            </li>
-            <li class="stats-item">
-              <div class="stats-number">10+</div>
-              <p class="stats-label">Projets réalisés</p>
-            </li>
-            <li class="stats-item">
-              <div class="stats-number">3</div>
-              <p class="stats-label">Certifications AWS</p>
-            </li>
-            <li class="stats-item">
-              <div class="stats-number">2</div>
-              <p class="stats-label">Postes Lead</p>
-            </li>
-          </ul>
-        </section> -->
-
+        <!-- Présentation personnelle -->
         <section class="informations-text">
           <p data-i18n="bio-1">
-            Lead Mobile Developer spécialisé en Flutter avec une forte expertise en architecture modulaire, performance
-            mobile et intégration API. Expérience confirmée dans la conception UI/UX, le pilotage d'équipes techniques,
-            et le développement d'applications complexes allant de la maquette à la mise en production.
+            Développeur mobile (Flutter / Android & iOS) avec un intérêt marqué pour le design d’interfaces et les produits numériques. J'aime transformer une idée en application concrète, de la conception UI/UX sur Figma jusqu'au développement et à la mise en production.
           </p>
           <p data-i18n="bio-2">
-            Approche orientée scalabilité, sécurité et qualité logicielle.
+            Tech Lead chez BrandOpera et développeur indépendant via FloysTech, je conçois des architectures modulaires (Clean Architecture, BLoC) et intègre des APIs et services Cloud (Firebase, REST). Basé à Bamako, j'interviens sur des projets locaux comme à l'international en remote.
           </p>
         </section>
-        <!-- Services Section -->
+
+        <!-- Section Ce que je fais (Slide 3 - 5 piliers) -->
         <section class="service">
           <h3 class="h3 service-title" data-i18n="services-title">Ce que je fais</h3>
 
           <ul class="service-list">
+
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Développement mobile icon" width="40">
+                <img src="./assets/images/icon-app.svg" alt="Développement Mobile" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-i18n="service-mobile-title">Développement Mobile</h4>
                 <p class="service-item-text" data-i18n="service-mobile-text">
-                  Conception et développement d'applications mobiles cross-platform avec Flutter.
+                  Applications Flutter multiplateformes (Android & iOS), interfaces fluides, animations, composants réutilisables et expérience utilisateur soignée.
                 </p>
               </div>
             </li>
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="Design icon" width="40">
+                <img src="./assets/images/icon-design.svg" alt="UI / UX Design" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title" data-i18n="service-design-title">Conception de Maquettes</h4>
+                <h4 class="h4 service-item-title" data-i18n="service-design-title">UI / UX</h4>
                 <p class="service-item-text" data-i18n="service-design-text">
-                  Création de maquettes interactives avec Figma pour une expérience utilisateur optimale.
+                  Conception sur Figma, création de Design Systems, prototypes interactifs et intégration pixel-perfect dans Flutter.
                 </p>
               </div>
             </li>
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Architecture icon" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="Architecture Logicielle" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title" data-i18n="service-arch-title">Architecture Applicative</h4>
+                <h4 class="h4 service-item-title" data-i18n="service-arch-title">Architecture Logicielle</h4>
                 <p class="service-item-text" data-i18n="service-arch-text">
-                  Mise en place de Clean Architecture, modularisation et composants réutilisables pour des apps scalables.
+                  Conception d'architectures modulaires avec Clean Architecture, séparation des responsabilités, BLoC et organisation d'un code maintenable.
                 </p>
               </div>
             </li>
+
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="API icon" width="40">
+                <img src="./assets/images/icon-api.svg" alt="Backend & Intégration" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title" data-i18n="service-api-title">Intégration d'API & Backend</h4>
+                <h4 class="h4 service-item-title" data-i18n="service-api-title">Backend & Intégration</h4>
                 <p class="service-item-text" data-i18n="service-api-text">
-                  Intégration d'API externes, SDK et services tiers pour connecter des applications à des
-                  fonctionnalités avancées
+                  Firebase, Firestore, Authentication, Storage, Cloud Functions et intégration d'API REST avec synchronisation sécurisée des données.
                 </p>
               </div>
             </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-team.svg" alt="Leadership Technique" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title" data-i18n="service-leadership-title">Leadership Technique</h4>
+                <p class="service-item-text" data-i18n="service-leadership-text">
+                  Encadrement d'équipes Flutter, revue de code, définition des bonnes pratiques, accompagnement des développeurs et préparation des releases Android & iOS.
+                </p>
+              </div>
+            </li>
+
           </ul>
         </section>
 
-        <!--
-          - testimonials
-        -->
-
-        <!-- <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned informations the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned informations the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned informations the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned informations the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section> -->
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-
       </article>
 
-
-      <!--
-        - #RESUME
-      -->
-
+      <!-- ================================
+           #SECTION CV
+      ================================ -->
       <article class="resume" data-page="resume">
+
         <header>
           <h2 class="h2 article-title" data-i18n="resume-title">CV</h2>
         </header>
 
-        <!-- Section Éducation -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3" data-i18n="education-title">Éducation</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="education-1-title">Formation Amazon Web Services (AWS)</h4>
-              <span data-i18n="education-1-period">Mars - Juillet 2023</span>
-              <p class="timeline-text" data-i18n-html="education-1-text">
-                Orange Digital Center, Bamako, Mali.<br>
-                Compétences acquises : Programmation Python, Bases de données, Réseautage, Introduction à la sécurité,
-                Cloud Computing.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="education-2-title">Licence en Ingénierie des Systèmes, Réseaux Informatiques et Sécurité
-              </h4>
-              <span data-i18n="education-2-period">2021 – 2022</span>
-              <p class="timeline-text" data-i18n-html="education-2-text">
-                Institut Supérieur de Technologies Appliquées (Technolab ISTA), Bamako, Mali.<br>
-                Spécialisation en réseaux informatiques et sécurité, mise en réseau de systèmes informatiques et
-                télécommunications.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="education-3-title">Diplôme Universitaire de Technologie (DUT), Electronique et Maintenance
-                Informatique</h4>
-              <span data-i18n="education-3-period">2019 – 2021</span>
-              <p class="timeline-text" data-i18n="education-3-text">
-                Institut Supérieur de Technologies Appliquées (Technolab ISTA), Bamako, Mali.
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Section Expérience Professionnelle -->
+        <!-- Expérience Professionnelle (Rôles Lead en avant) -->
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
@@ -513,54 +310,66 @@
           </div>
 
           <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="exp-1-title">Lead Développeur Mobile – SUPERBRAND</h4>
-              <span data-i18n="exp-1-period">Mai 2025 – Présent</span>
+
+            <li class="timeline-item highlight-role">
+              <div class="role-badge">Lead Role</div>
+              <h4 class="h4 timeline-item-title" data-i18n="exp-1-title">Tech Lead Mobile – BrandOpera</h4>
+              <span class="timeline-period" data-i18n="exp-1-period">Mai 2025 – Présent</span>
               <p class="timeline-text" data-i18n-html="exp-1-text">
                 Pilotage technique de l'équipe mobile (Flutter / Android & iOS).<br>
                 Conception UI/UX et architecture applicative (Clean Architecture, modularisation).<br>
-                Optimisation des performances, sécurité et gestion des releases Android & iOS.<br>
+                Optimisation des performances, sécurité et gestion des releases Android & iOS.
               </p>
             </li>
-            <li class="timeline-item">
+
+            <li class="timeline-item highlight-role">
+              <div class="role-badge">Lead Role</div>
               <h4 class="h4 timeline-item-title" data-i18n="exp-2-title">Lead Développeur Flutter – Korix Africa</h4>
-              <span data-i18n="exp-2-period">2023 – 2025</span>
+              <span class="timeline-period" data-i18n="exp-2-period">2023 – 2025</span>
               <p class="timeline-text" data-i18n-html="exp-2-text">
                 Supervision d'une équipe de développeurs et optimisation des performances Flutter.<br>
-                Décisions techniques sur l’architecture et intégration avancée d’API & Firebase.<br>
-                Collaboration avec les équipes produit et design pour améliorer l’expérience utilisateur.<br>
-                <strong>Projets réalisés :</strong><br>
-                – Web App Telegram <em>GANDALVERSE</em> – Monde Virtuel : développement d’une application accessible via un bot Telegram, hébergée sur Firebase, permettant d’explorer un monde virtuel, gérer des actifs, suivre des formations et consulter des actualités.<br>
-                – Application <em>Acxes</em> – Suivi d’Événements d’Artistes : participation au développement d’une application pour suivre des shows d’artistes, acheter des badges d’événements et visionner des lives.
+                Décisions techniques sur l'architecture et intégration avancée d'API & Firebase.<br>
+                Collaboration avec les équipes produit et design pour améliorer l'expérience utilisateur.<br>
+                <strong>Projets phares réalisés :</strong><br>
+                – Web App Telegram <em>GANDALVERSE</em> – Monde Virtuel : application accessible via un bot Telegram, hébergée sur Firebase (monde virtuel, gestion d'actifs, formations et actualités).<br>
+                – Application <em>Acxes</em> – Suivi d'Événements d'Artistes : application de suivi des shows d'artistes, achat de badges d'événements et visionnage de lives.
               </p>
             </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" data-i18n="exp-floystech-title">Développeur Mobile & Web Indépendant – FloysTech</h4>
+              <span class="timeline-period" data-i18n="exp-floystech-period">Août 2022 – Présent</span>
+              <p class="timeline-text" data-i18n-html="exp-floystech-text">
+                Conception et développement de solutions mobiles et web adaptées aux besoins des clients. Intervention complète : de l'analyse des besoins jusqu'au développement et à la mise en production, principalement avec Flutter, Dart et les technologies web.
+              </p>
+            </li>
+
           </ol>
         </section>
 
-        <!-- Section Missions Freelance -->
+        <!-- Missions Freelance -->
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
+              <ion-icon name="laptop-outline"></ion-icon>
             </div>
             <h3 class="h3" data-i18n="freelance-title">Missions Freelance</h3>
           </div>
 
-          
-
           <ol class="timeline-list">
+
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title" data-i18n="freelance-1-title">FlyBagage – Application mobile</h4>
-              <span data-i18n="freelance-1-period">2025</span>
+              <span class="timeline-period" data-i18n="freelance-1-period">2025</span>
               <p class="timeline-text" data-i18n-html="freelance-1-text">
                 Intervention sur l'application mobile FlyBagage : corrections de bugs, création de nouvelles interfaces et fonctionnalités, et optimisation des modules existants pour de meilleures performances.<br>
-                <a href="https://flybagage.com" target="_blank">flybagage.com</a>
+                <a href="https://flybagage.com" target="_blank" rel="noopener noreferrer">flybagage.com</a>
               </p>
             </li>
-            
+
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title" data-i18n="freelance-2-title">Développeur Mobile – Application Karrou</h4>
-              <span data-i18n="freelance-2-period">2024 – 2025</span>
+              <span class="timeline-period" data-i18n="freelance-2-period">2024 – 2025</span>
               <p class="timeline-text" data-i18n-html="freelance-2-text">
                 Développement d'une application mobile de rencontres avec Flutter, BLoC et intégration d'API REST.<br>
                 Mise en place d'un système de messagerie via polling en l'absence de WebSockets.
@@ -568,26 +377,65 @@
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="freelance-3-title">Projet de Gestion Immobilière - Banque BMS</h4>
-              <span data-i18n="freelance-3-period">2023</span>
-              <p class="timeline-text" data-i18n="freelance-3-text">
-                Développement d'une application de gestion immobilière avec intégration d'API pour la synchronisation
-                des données.
+              <h4 class="h4 timeline-item-title" data-i18n="freelance-3-title">Gestion Immobilière – Banque BMS</h4>
+              <span class="timeline-period" data-i18n="freelance-3-period">2023</span>
+              <p class="timeline-text" data-i18n-html="freelance-3-text">
+                Développement d'une application de gestion immobilière avec intégration d'API pour la synchronisation des données.
               </p>
             </li>
 
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="freelance-4-title">Projet de Localisation de Produits Pharmaceutiques</h4>
-              <span data-i18n="freelance-4-period">2022</span>
-              <p class="timeline-text" data-i18n="freelance-4-text">
-                Création d'une application facilitant la recherche et la localisation de produits pharmaceutiques via
-                intégration d'API.
+              <h4 class="h4 timeline-item-title" data-i18n="freelance-4-title">Localisation de Produits Pharmaceutiques</h4>
+              <span class="timeline-period" data-i18n="freelance-4-period">2022</span>
+              <p class="timeline-text" data-i18n-html="freelance-4-text">
+                Création d'une application facilitant la recherche et la localisation de produits pharmaceutiques via intégration d'API.
               </p>
             </li>
+
           </ol>
         </section>
 
-        <!-- Section Références -->
+        <!-- Éducation -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3" data-i18n="education-title">Éducation</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" data-i18n="education-1-title">Formation Amazon Web Services (AWS)</h4>
+              <span class="timeline-period" data-i18n="education-1-period">Mars – Juillet 2023</span>
+              <p class="timeline-text" data-i18n-html="education-1-text">
+                Orange Digital Center, Bamako, Mali.<br>
+                Compétences acquises : Programmation Python, Bases de données, Réseautage, Introduction à la sécurité, Cloud Computing.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" data-i18n="education-2-title">Licence en Ingénierie des Systèmes, Réseaux Informatiques et Sécurité</h4>
+              <span class="timeline-period" data-i18n="education-2-period">2021 – 2022</span>
+              <p class="timeline-text" data-i18n-html="education-2-text">
+                Institut Supérieur de Technologies Appliquées (Technolab ISTA), Bamako, Mali.<br>
+                Spécialisation en réseaux informatiques et sécurité, mise en réseau de systèmes informatiques et télécommunications.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title" data-i18n="education-3-title">Diplôme Universitaire de Technologie (DUT), Électronique et Maintenance Informatique</h4>
+              <span class="timeline-period" data-i18n="education-3-period">2019 – 2021</span>
+              <p class="timeline-text" data-i18n-html="education-3-text">
+                Institut Supérieur de Technologies Appliquées (Technolab ISTA), Bamako, Mali.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <!-- Références & Projets Personnels -->
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
@@ -595,10 +443,11 @@
             </div>
             <h3 class="h3" data-i18n="references-title">Références</h3>
           </div>
+
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Issif Diawara</h4>
-              <span data-i18n="ref-1-role">Co-founder &amp; COO – Wassa Technologie</span>
+              <span class="timeline-period" data-i18n="ref-1-role">Co-founder &amp; COO – Wassa Technologie</span>
               <p class="timeline-text">
                 <a href="tel:+33783026767" class="contact-link">+33 7 83 02 67 67</a>
                 <a href="mailto:idiawara@wassatechnologie.com" class="contact-link">idiawara@wassatechnologie.com</a>
@@ -607,75 +456,56 @@
           </ol>
         </section>
 
-        <!-- Section Projets Récents -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="folder-open-outline"></ion-icon>
-            </div>
-            <h3 class="h3" data-i18n="personal-title">Projets Personnels</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title" data-i18n="personal-1-title">Développeur et Concepteur - Erudite (Projet Personnel)</h4>
-              <span data-i18n="personal-1-period">2023 – Présent</span>
-              <p class="timeline-text" data-i18n-html="personal-1-text">
-                Création d'une application éducative avec des cours interactifs et des quiz.<br>
-                Intégration de Firebase pour la gestion des données et l'authentification.<br>
-                Actuellement en phase de test avec plus de 30 utilisateurs.
-              </p>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Section Compétences -->
+        <!-- Compétences & Badges -->
         <section class="skill">
           <h3 class="h3 skills-title" data-i18n="skills-title">Mes Compétences</h3>
-          <!-- Liste des Compétences -->
+
           <div class="skills-list">
+
             <div class="skill-category">
               <h4 class="h4 skill-category-title" data-i18n="skill-cat-mobile">Développement Mobile</h4>
               <ul class="skill-items">
                 <li class="skill-item">Flutter & Dart</li>
                 <li class="skill-item">Clean Architecture & Modularisation</li>
-                <li class="skill-item">Intégration d'API REST</li>
-                <li class="skill-item">Firebase (Authentification, Firestore)</li>
-                <li class="skill-item">Gestion d'état avec BLoC</li>
+                <li class="skill-item">Gestion d'état BLoC / Provider</li>
+                <li class="skill-item">Intégration API REST & WebSockets</li>
+                <li class="skill-item">Firebase (Auth, Firestore, Cloud Messaging)</li>
+                <li class="skill-item">Publication Google Play & App Store</li>
               </ul>
             </div>
 
             <div class="skill-category">
               <h4 class="h4 skill-category-title" data-i18n="skill-cat-web">Développement Web</h4>
               <ul class="skill-items">
-                <li class="skill-item">JavaScript</li>
+                <li class="skill-item">JavaScript ES6+</li>
                 <li class="skill-item">Vue.js</li>
+                <li class="skill-item">HTML5 / CSS3 moderne</li>
                 <li class="skill-item">Tailwind CSS</li>
-                <li class="skill-item">Intégration d'API externes</li>
+                <li class="skill-item">Responsive Design</li>
               </ul>
             </div>
 
             <div class="skill-category">
               <h4 class="h4 skill-category-title" data-i18n="skill-cat-cloud">Cloud & Outils</h4>
               <ul class="skill-items">
-                <li class="skill-item">AWS (Cloud Practitioner)</li>
-                <li class="skill-item">Git & GitHub</li>
-                <li class="skill-item">Linux & Réseaux</li>
+                <li class="skill-item">AWS Cloud Practitioner</li>
+                <li class="skill-item">Git & GitHub CI/CD</li>
+                <li class="skill-item">Figma UI/UX & Prototypage</li>
+                <li class="skill-item">Linux & Administration Réseau</li>
                 <li class="skill-item">Power Platform</li>
-                <li class="skill-item">Conception de maquettes (Figma)</li>
               </ul>
             </div>
-          </div>
 
+          </div>
 
           <!-- Section Certifications -->
           <div class="certifications-grid">
             <h4 class="h4 languages-title" data-i18n="cert-title">Certifications</h4>
             <ul class="skill-items">
-              <li class="skill-item">CCNA – Introduction to Networks</li>
-              <li class="skill-item">AWS re/Start Graduate</li>
-              <li class="skill-item">AWS Certified Cloud Practitioner</li>
-              <li class="skill-item">AWS Educate – Serverless</li>
+              <li class="skill-item cert-badge">AWS Certified Cloud Practitioner</li>
+              <li class="skill-item cert-badge">AWS re/Start Graduate</li>
+              <li class="skill-item cert-badge">AWS Educate – Serverless</li>
+              <li class="skill-item cert-badge">CCNA – Introduction to Networks</li>
             </ul>
           </div>
 
@@ -688,53 +518,44 @@
             </ul>
           </div>
 
-        <!-- Section Langages de Programmation -->
+          <!-- Section Langages de Programmation -->
           <div class="languages-grid">
             <h4 class="h4 languages-title" data-i18n="prog-lang-title">Langages de Programmation</h4>
             <div class="grid-container">
               <div class="language-item">
-                <img src="./assets/images/icon-flutter.png" alt="Flutter" width="50">
+                <img src="./assets/images/icon-flutter.png" alt="Flutter & Dart" width="48" height="48">
                 <p class="language-name">Flutter & Dart</p>
               </div>
-
               <div class="language-item">
-                <img src="./assets/images/icon-python.png" alt="Python" width="50">
+                <img src="./assets/images/icon-python.png" alt="Python" width="48" height="48">
                 <p class="language-name">Python</p>
               </div>
-
               <div class="language-item">
-                <img src="./assets/images/icon-javascript.png" alt="JavaScript" width="50">
+                <img src="./assets/images/icon-javascript.png" alt="JavaScript" width="48" height="48">
                 <p class="language-name">JavaScript</p>
               </div>
-
               <div class="language-item">
-                <img src="./assets/images/icon-sql.png" alt="SQL" width="50">
+                <img src="./assets/images/icon-sql.png" alt="SQL" width="48" height="48">
                 <p class="language-name">SQL</p>
               </div>
-
               <div class="language-item">
-                <img src="./assets/images/icon-cpp.png" alt="C++" width="50">
+                <img src="./assets/images/icon-cpp.png" alt="C++" width="48" height="48">
                 <p class="language-name">C++</p>
               </div>
-
               <div class="language-item">
-                <img src="./assets/images/icon-vue.png" alt="Vue.js" width="50">
+                <img src="./assets/images/icon-vue.png" alt="Vue.js" width="48" height="48">
                 <p class="language-name">Vue.js</p>
               </div>
             </div>
           </div>
 
         </section>
+
       </article>
 
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
+      <!-- ================================
+           #SECTION PORTFOLIO
+      ================================ -->
       <article class="portfolio" data-page="portfolio">
 
         <header>
@@ -743,548 +564,393 @@
 
         <section class="projects">
 
+          <!-- Filtres boutons écran large -->
           <ul class="filter-list">
-
             <li class="filter-item">
               <button class="active" data-filter-btn data-i18n="filter-all">All</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn data-i18n="filter-webdesign">Web design</button>
-            </li>
-
             <li class="filter-item">
               <button data-filter-btn data-i18n="filter-apps">Applications</button>
             </li>
-
+            <li class="filter-item">
+              <button data-filter-btn data-i18n="filter-webdesign">Web design</button>
+            </li>
             <li class="filter-item">
               <button data-filter-btn data-i18n="filter-webdev">Web development</button>
             </li>
-
           </ul>
 
+          <!-- Menu déroulant filtre mobile -->
           <div class="filter-select-box">
-
             <button class="filter-select" data-select>
-
               <div class="select-value" data-selecct-value>Select category</div>
-
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
             </button>
 
             <ul class="select-list">
-
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-
               <li class="select-item">
                 <button data-select-item>Applications</button>
               </li>
-
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
               <li class="select-item">
                 <button data-select-item>Web development</button>
               </li>
-
             </ul>
-
           </div>
 
+                    <!-- Grille des Projets (Du Concept au Produit - Réalisations Authentiques) -->
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/PRESENTATION ERUDITE.png" target="_blank">
+            <!-- 1. acXes -->
+            <li class="project-item active" data-filter-item data-category="applications"
+                data-project-title="acXes — La Magie des Badges"
+                data-project-category="Applications • Flutter & Monétisation"
+                data-project-img="./assets/images/projects/acxes.png"
+                data-project-desc="Plateforme mobile pour créateurs de contenus en Afrique. Développement du catalogue multimédia (musique, vidéos, événements) sous Flutter, système de badges d accès exclusifs et intégration du streaming."
+                data-project-tags="Flutter, Figma, UI/UX Design, Mobile Prototyping, Design System, Google Play"
+                data-project-link="https://play.google.com/store/apps/details?id=com.acxesapp.acxesapp&amp;hl=fr"
+                data-project-link-text="Voir sur Google Play">
+              <div class="project-card-interactive">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/acxes.png" alt="acXes — La Magie des Badges" loading="lazy">
+                </figure>
+                <div class="project-meta">
+                  <h3 class="project-title">acXes — La Magie des Badges</h3>
+                  <p class="project-category">Applications • Flutter &amp; Monétisation</p>
+                </div>
+              </div>
+            </li>
 
+            <!-- 2. Koda Electronics -->
+            <li class="project-item active" data-filter-item data-category="web development, web design"
+                data-project-title="Koda Electronics — E-commerce &amp; Web App"
+                data-project-category="Web development • E-Commerce"
+                data-project-img="./assets/images/projects/koda_electronics.png"
+                data-project-desc="Boutique en ligne et application web de matériel high-tech. Conception des maquettes responsive sur Figma, structuration du catalogue, panier interactif et parcours de commande optimisé."
+                data-project-tags="Figma, Web Design, UI/UX Design, E-commerce, Vercel"
+                data-project-link="https://koda-electronics.vercel.app/"
+                data-project-link-text="Visiter koda-electronics.vercel.app">
+              <div class="project-card-interactive">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/koda_electronics.png" alt="Koda Electronics" loading="lazy">
+                </figure>
+                <div class="project-meta">
+                  <h3 class="project-title">Koda Electronics</h3>
+                  <p class="project-category">Web development • E-Commerce &amp; Web App</p>
+                </div>
+              </div>
+            </li>
+
+            <!-- 3. VTC App Concept -->
+            <li class="project-item active" data-filter-item data-category="applications, web design"
+                data-project-title="VTC App Concept — Réinventer la mobilité urbaine"
+                data-project-category="Applications • UI/UX &amp; Mobilité"
+                data-project-img="./assets/images/projects/vtc_concept.png"
+                data-project-desc="Design d interface pour application VTC. Parcours de réservation de course direct, dark mode soigné avec forts contrastes, cartes flottantes et fiches de trajet ergonomiques."
+                data-project-tags="Figma, UI/UX Design, Mobile Prototyping, Design System, Behance"
+                data-project-link="https://www.behance.net/gallery/250293143/VTC-Design"
+                data-project-link-text="Voir le projet sur Behance">
+              <div class="project-card-interactive">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/projects/vtc_concept.png" alt="VTC App Concept" loading="lazy">
+                </figure>
+                <div class="project-meta">
+                  <h3 class="project-title">VTC App Concept</h3>
+                  <p class="project-category">Applications • UI/UX &amp; Mobilité</p>
+                </div>
+              </div>
+            </li>
+
+            <!-- 4. Fuel Station Suite -->
+            <li class="project-item active" data-filter-item data-category="applications, web design"
+                data-project-title="Fuel Station Suite — Marque Blanche"
+                data-project-category="Applications • Marque Blanche B2C"
+                data-project-img="./assets/images/projects/carburant_Maquette.png"
+                data-project-desc="Application mobile B2C pour réseaux de stations-service. Géolocalisation des stations, affichage des prix en temps réel et paiement. Architecture de Design System sur Figma déclinable pour 4 marques."
+                data-project-tags="Figma, Design System Adaptatif, UX B2C, Mobile App, Multi-Brand"
+                data-project-link="./assets/images/projects/carburant_Maquette.png"
+                data-project-link-text="Voir la maquette HD">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/projects/PRESENTATION ERUDITE.png" alt="erudite" loading="lazy">
+                  <img src="./assets/images/projects/carburant_Maquette.png" alt="Fuel Station Suite" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">ERUDITE</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">Fuel Station Suite</h3>
+                  <p class="project-category">Applications • Marque Blanche B2C</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/Tela.png" target="_blank">
-
+            <!-- 5. B.C.S. SA -->
+            <li class="project-item active" data-filter-item data-category="web development, web design"
+                data-project-title="B.C.S. SA — Système de Gestion"
+                data-project-category="Web development • Dashboard Bancaire"
+                data-project-img="./assets/images/projects/bcs_dashboard.png"
+                data-project-desc="Interface web de gestion et tableau de bord pour la Banque Commerciale du Sahel. Visualisation des indicateurs clés, gestion documentaire et validation des opérations au quotidien."
+                data-project-tags="Figma, Web Dashboard, Data Visualization, UI/UX Design, FinTech"
+                data-project-link="./assets/images/projects/bcs_dashboard.png"
+                data-project-link-text="Aperçu du dashboard">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/projects/Tela.png" alt="tela" loading="lazy">
+                  <img src="./assets/images/projects/bcs_dashboard.png" alt="B.C.S. SA" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">TELA</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">B.C.S. SA — Système de Gestion</h3>
+                  <p class="project-category">Web development • Dashboard Bancaire</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/Médiphax.jpg" target="_blank">
-
+            <!-- 6. GreenTrace -->
+            <li class="project-item active" data-filter-item data-category="applications, web design"
+                data-project-title="GreenTrace — Application d éco-tracking"
+                data-project-category="Applications • Éco-Tracking &amp; Gamification"
+                data-project-img="./assets/images/projects/greentrace.png"
+                data-project-desc="Application mobile d éco-tracking. Suivi des actions écologiques quotidiennes, calcul d impact carbone, signalements géolocalisés et interface claire axée sur les données."
+                data-project-tags="Figma, UI/UX Design, Data Visualization, Gamification, Écologie"
+                data-project-link="./assets/images/projects/greentrace.png"
+                data-project-link-text="Aperçu de l application">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/projects/Médiphax.jpg" alt="tela" loading="lazy">
+                  <img src="./assets/images/projects/greentrace.png" alt="GreenTrace" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Médiphax (en cours)</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">GreenTrace</h3>
+                  <p class="project-category">Applications • Éco-Tracking &amp; Gamification</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/maquette-1.png" target="_blank">
-
+            <!-- 7. Arbab Chicken App -->
+            <li class="project-item active" data-filter-item data-category="applications, web design"
+                data-project-title="Arbab Chicken App — Food Delivery &amp; E-commerce"
+                data-project-category="Applications • Food Delivery"
+                data-project-img="./assets/images/projects/arbab_chicken.png"
+                data-project-desc="Application mobile de commande de repas pour restaurant rapide. Sélection des menus, personnalisation des plats, gestion du panier et écrans d offres promotionnelles."
+                data-project-tags="Figma, UI/UX Design, Food Delivery, E-Commerce, Prototyping"
+                data-project-link="./assets/images/projects/arbab_chicken.png"
+                data-project-link-text="Aperçu du concept">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/projects/maquette-1.png" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/images/projects/arbab_chicken.png" alt="Arbab Chicken App" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">(Maquette)</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">Arbab Chicken App</h3>
+                  <p class="project-category">Applications • Food Delivery</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/maquette-3.png" target="_blank">
-
+            <!-- 8. TELA -->
+            <li class="project-item active" data-filter-item data-category="applications"
+                data-project-title="TELA — Mobilité Urbaine"
+                data-project-category="Applications • Flutter &amp; Mobilité"
+                data-project-img="./assets/images/projects/Tela.png"
+                data-project-desc="Application mobile de transport et de commande de trajets urbains développée sous Flutter. Intégration de la cartographie Google Maps, suivi d itinéraire en temps réel et gestion d état avec BLoC."
+                data-project-tags="Flutter, Dart, Google Maps API, Geolocation, BLoC"
+                data-project-link="./assets/images/projects/Tela.png"
+                data-project-link-text="Aperçu de l application">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/projects/maquette-3.png" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/images/projects/Tela.png" alt="TELA" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">(Maquette)</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">TELA</h3>
+                  <p class="project-category">Applications • Mobilité Urbaine</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/maquette-2.png" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/projects/maquette-2.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">(Maquette)</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/Aws Cloud PractoQuiz.png" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/Aws Cloud PractoQuiz.png" alt="PractoQuiz" loading="lazy">
-                </figure>
-                <h3 class="project-title">PractoQuiz</h3>
-                <p class="project-category">Applications</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/E-Quiz.png" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/E-Quiz.png" alt="E-Quiz" loading="lazy">
-                </figure>
-                <h3 class="project-title">E-Quiz</h3>
-                <p class="project-category">Applications</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/TV Maquette.png" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/TV Maquette.png" alt="TV Maquette" loading="lazy">
-                </figure>
-                <h3 class="project-title">TV (Maquette)</h3>
-                <p class="project-category">Applications</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://flybagage.com" target="_blank">
-
+            <!-- 9. FlyBagage -->
+            <li class="project-item active" data-filter-item data-category="applications"
+                data-project-title="FlyBagage — Application Mobile"
+                data-project-category="Applications • Logistique &amp; Voyage"
+                data-project-img="./assets/images/projects/kougne-banner.png"
+                data-project-desc="Application mobile de transport collaboratif de bagages. Développement de nouvelles interfaces sous Flutter, correction de bugs critiques et optimisation des flux réseau."
+                data-project-tags="Flutter, Dart, Clean Architecture, REST API"
+                data-project-link="https://flybagage.com"
+                data-project-link-text="Visiter flybagage.com">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="open-outline"></ion-icon>
                   </div>
                   <img src="./assets/images/projects/kougne-banner.png" alt="FlyBagage" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">FlyBagage</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">FlyBagage</h3>
+                  <p class="project-category">Applications • Logistique</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://future-concept.net/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="open-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/futureconcept.png" alt="Future Concept" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Future Concept</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://saveur-96-fresh-pages.vercel.app/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="open-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/saveur.png" alt="Saveur 96" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Saveur 96</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://etef-mali.vercel.app/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="open-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/etef.png" alt="ETEF Mali" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">ETEF Mali</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://aishashop-lake.vercel.app/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="open-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/shop.png" alt="Aisha Shop" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Aisha Shop</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <!-- <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/kougne.png" target="_blank">
-
+            <!-- 10. ERUDITE -->
+            <li class="project-item active" data-filter-item data-category="applications"
+                data-project-title="ERUDITE — EdTech Mobile"
+                data-project-category="Applications • Éducation"
+                data-project-img="./assets/images/projects/PRESENTATION ERUDITE.png"
+                data-project-desc="Application mobile éducative avec cours interactifs et modules de quiz. Développée avec Flutter et Firebase (authentification et stockage cloud). Testée par plus de 30 utilisateurs."
+                data-project-tags="Flutter, Dart, Firebase, BLoC, Mobile App"
+                data-project-link="./assets/images/projects/PRESENTATION ERUDITE.png"
+                data-project-link-text="Aperçu du projet">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/kougne.png" alt="Kougne" loading="lazy">
+                  <img src="./assets/images/projects/PRESENTATION ERUDITE.png" alt="ERUDITE" loading="lazy">
                 </figure>
+                <div class="project-meta">
+                  <h3 class="project-title">ERUDITE</h3>
+                  <p class="project-category">Applications • Flutter &amp; EdTech</p>
+                </div>
+              </div>
+            </li>
 
-                <h3 class="project-title">Kougne</h3>
-
-                <p class="project-category">Applications</p>
-                
-              </a>
-            </li> -->
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/carburant_Maquette.png" target="_blank">
+            <!-- 11. Smart TV Streaming -->
+            <li class="project-item active" data-filter-item data-category="web design"
+                data-project-title="Smart TV — Streaming Multimédia"
+                data-project-category="Web design • Smart TV Interface"
+                data-project-img="./assets/images/projects/TV Maquette.png"
+                data-project-desc="Interface pour écran TV et boîtiers multimédia (Android TV). Navigation adaptée à la télécommande et lecture de flux vidéo en direct."
+                data-project-tags="Figma, Smart TV UI, 10-Foot UI, Streaming"
+                data-project-link="./assets/images/projects/TV Maquette.png"
+                data-project-link-text="Voir la maquette HD">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/projects/carburant_Maquette.png" alt="Carburant Maquette" loading="lazy">
+                  <img src="./assets/images/projects/TV Maquette.png" alt="Smart TV Streaming" loading="lazy">
                 </figure>
-                <h3 class="project-title">Carburant (Maquette)</h3>
-                <p class="project-category">Applications</p>
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">Smart TV — Streaming</h3>
+                  <p class="project-category">Web design • Interface TV</p>
+                </div>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="./assets/images/projects/deme_Maquette.png" target="_blank">
+            <!-- 12. Maquette Deme -->
+            <li class="project-item active" data-filter-item data-category="web design"
+                data-project-title="Maquette Deme — Cagnotte Solidaire"
+                data-project-category="Web design • FinTech"
+                data-project-img="./assets/images/projects/deme_Maquette.png"
+                data-project-desc="Prototype Figma d application mobile pour tontines et cagnottes participatives. Parcours de cotisation et suivi des collectes."
+                data-project-tags="Figma, FinTech UI, Mobile UX, Ergonomie"
+                data-project-link="./assets/images/projects/deme_Maquette.png"
+                data-project-link-text="Voir la maquette HD">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
                   <img src="./assets/images/projects/deme_Maquette.png" alt="Deme Maquette" loading="lazy">
                 </figure>
-                <h3 class="project-title">Cagnotte (Maquette)</h3>
-                <p class="project-category">Applications</p>
-              </a>
+                <div class="project-meta">
+                  <h3 class="project-title">Maquette Deme (Cagnotte)</h3>
+                  <p class="project-category">Web design • FinTech</p>
+                </div>
+              </div>
             </li>
 
-            <!-- <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
+            <!-- 13. Saveur 96 -->
+            <li class="project-item active" data-filter-item data-category="web development"
+                data-project-title="Saveur 96 — Restaurant &amp; Food"
+                data-project-category="Web development • Gastronomie"
+                data-project-img="./assets/images/projects/saveur.png"
+                data-project-desc="Site web pour restaurant : consultation de la carte, présentation des menus et formulaire de réservation."
+                data-project-tags="Web App, JavaScript, Responsive, Vercel"
+                data-project-link="https://saveur-96-fresh-pages.vercel.app/"
+                data-project-link-text="Visiter saveur-96">
+              <div class="project-card-interactive">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="open-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="./assets/images/projects/saveur.png" alt="Saveur 96" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li> -->
-
-
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+                <div class="project-meta">
+                  <h3 class="project-title">Saveur 96</h3>
+                  <p class="project-category">Web development • Gastronomie</p>
                 </div>
-
-              </a>
+              </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+            <!-- 14. ETEF Mali -->
+            <li class="project-item active" data-filter-item data-category="web development"
+                data-project-title="ETEF Mali — BTP &amp; Énergie"
+                data-project-category="Web development • Entreprise"
+                data-project-img="./assets/images/projects/etef.png"
+                data-project-desc="Site web institutionnel pour entreprise de BTP et d énergie : présentation des chantiers et demande de devis."
+                data-project-tags="Web Platform, JavaScript, CSS3, Entreprise"
+                data-project-link="https://etef-mali.vercel.app/"
+                data-project-link-text="Visiter etef-mali">
+              <div class="project-card-interactive">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
+                  <img src="./assets/images/projects/etef.png" alt="ETEF Mali" loading="lazy">
+                </figure>
+                <div class="project-meta">
+                  <h3 class="project-title">ETEF Mali</h3>
+                  <p class="project-category">Web development • BTP &amp; Énergie</p>
                 </div>
-
-              </a>
+              </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+            <!-- 15. Future Concept -->
+            <li class="project-item active" data-filter-item data-category="web development"
+                data-project-title="Future Concept — Agence Digitale"
+                data-project-category="Web development • Vitrine"
+                data-project-img="./assets/images/projects/futureconcept.png"
+                data-project-desc="Site web vitrine pour agence digitale : présentation des réalisations et formulaire de contact."
+                data-project-tags="HTML5, CSS3, JavaScript, Web Showcase"
+                data-project-link="https://future-concept.net/"
+                data-project-link-text="Visiter future-concept.net">
+              <div class="project-card-interactive">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="open-outline"></ion-icon>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                  <img src="./assets/images/projects/futureconcept.png" alt="Future Concept" loading="lazy">
                 </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
+                <div class="project-meta">
+                  <h3 class="project-title">Future Concept</h3>
+                  <p class="project-category">Web development • Vitrine</p>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
+              </div>
             </li>
 
           </ul>
@@ -1293,34 +959,63 @@
 
       </article>
 
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
+      <!-- ================================
+           #SECTION CONTACT
+      ================================ -->
       <article class="contact" data-page="contact">
+
         <header>
           <h2 class="h2 article-title" data-i18n="contact-page-title">Contact</h2>
         </header>
 
-        <!-- Section Carte (Optionnelle) -->
+        <!-- Actions Directes (WhatsApp / Appel - Slide 14 du document) -->
+        <section class="quick-contact-section">
+          <div class="quick-contact-header">
+            <h3 class="h3 contact-quick-title" data-i18n="contact-quick-title">Have a project in mind?</h3>
+            <p class="contact-quick-subtitle" data-i18n="contact-quick-subtitle">Construisons votre prochain produit. Disponible pour échanger directement par messagerie ou appel :</p>
+          </div>
+
+          <div class="quick-contact-grid">
+            <a href="https://wa.me/22367734742" target="_blank" rel="noopener noreferrer" class="quick-contact-btn whatsapp">
+              <div class="quick-icon-box">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </div>
+              <div class="quick-btn-info">
+                <span class="quick-btn-label" data-i18n="contact-whatsapp">WhatsApp</span>
+                <strong class="quick-btn-val">+223 67 73 47 42</strong>
+              </div>
+              <ion-icon name="arrow-forward-outline" class="quick-arrow"></ion-icon>
+            </a>
+
+            <a href="tel:+22367734742" class="quick-contact-btn phone">
+              <div class="quick-icon-box">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+              <div class="quick-btn-info">
+                <span class="quick-btn-label" data-i18n="contact-call">Appeler</span>
+                <strong class="quick-btn-val">(+223) 67 73 47 42 / 75 14 36 51</strong>
+              </div>
+              <ion-icon name="arrow-forward-outline" class="quick-arrow"></ion-icon>
+            </a>
+          </div>
+        </section>
+
+        <!-- Carte & Localisation -->
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.123456789012!2d-7.987654321!3d12.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBamako%2C%20Mali!5e0!3m2!1sen!2sml!4v1234567890123!5m2!1sen!2sml"
-              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124694.49880159235!2d-8.083333!3d12.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51cd65e90d23ab%3A0x4465aa90f6797b53!2sBamako%2C%20Mali!5e0!3m2!1sfr!2sml!4v1700000000000!5m2!1sfr!2sml"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Localisation Bamako, Mali">
             </iframe>
           </figure>
+          <p class="map-caption" data-i18n="contact-map-caption">Basé à Bamako, Mali • Disponible en Remote pour des missions partout dans le monde.</p>
         </section>
 
-
-        <!-- Section Formulaire de Contact -->
+        <!-- Formulaire de Contact -->
         <section class="contact-form">
-          <h3 class="h3 form-title" data-i18n="form-title">Formulaire de Contact</h3>
+          <h3 class="h3 form-title" data-i18n="form-title">Envoyer un Message</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="mailto:dossouyovojoseph04@gmail.com" method="POST" enctype="text/plain" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Nom complet" required data-form-input data-i18n-placeholder="form-name">
               <input type="email" name="email" class="form-input" placeholder="Adresse email" required data-form-input data-i18n-placeholder="form-email">
@@ -1328,32 +1023,61 @@
 
             <textarea name="message" class="form-input" placeholder="Votre message" required data-form-input data-i18n-placeholder="form-message"></textarea>
 
-            <button class="form-btn" type="submit" data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span data-i18n="form-send">Envoyer</span>
+            <button class="form-btn" type="submit" data-form-btn disabled>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+              <span data-i18n="form-send">Envoyer le message</span>
             </button>
           </form>
         </section>
+
       </article>
 
     </div>
 
   </main>
 
+  <!-- ================================
+       #MODALE POPUP PROJET
+  ================================ -->
+  <div class="project-modal-container" data-project-modal-container aria-hidden="true">
+    <div class="project-modal-overlay" data-project-modal-overlay></div>
+    <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
 
+      <button class="project-modal-close-btn" data-project-modal-close aria-label="Fermer la modale">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
 
+      <figure class="project-modal-banner">
+        <img src="" alt="" data-project-modal-img>
+      </figure>
 
+      <div class="project-modal-content">
+        <div class="project-modal-header">
+          <span class="project-modal-category" data-project-modal-cat>Applications</span>
+          <h3 class="h3 project-modal-title" id="projectModalTitle" data-project-modal-title>Titre du projet</h3>
+        </div>
 
+        <div class="project-modal-tags" data-project-modal-tags></div>
 
-  <!--
-    - custom js link
-  -->
+        <p class="project-modal-desc" data-project-modal-desc>Description du projet</p>
+
+        <div class="project-modal-actions">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="form-btn project-modal-btn" data-project-modal-link>
+            <span data-project-modal-btn-text>Ouvrir le projet</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
   <script src="./assets/js/translations.js"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/antigravity-bg.js"></script>
 
-  <!--
-    - ionicon link
-  -->
+  <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
