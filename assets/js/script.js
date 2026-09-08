@@ -47,6 +47,10 @@ const openProjectModal = function (projectItem) {
 
   if (projectModalImg) {
     projectModalImg.style.opacity = "1";
+    projectModalImg.onerror = function () {
+      this.onerror = null;
+      this.src = "./assets/images/projects/bcs_dashboard.png";
+    };
     projectModalImg.src = imgSrc;
     projectModalImg.alt = title;
   }
@@ -87,6 +91,10 @@ const openProjectModal = function (projectItem) {
         btn.setAttribute("aria-label", `Afficher vue ${index + 1}`);
 
         const img = document.createElement("img");
+        img.onerror = function () {
+          this.onerror = null;
+          this.src = "./assets/images/projects/bcs_dashboard.png";
+        };
         img.src = thumbSrc;
         img.alt = `${title} miniature ${index + 1}`;
         img.loading = "lazy";

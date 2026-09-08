@@ -246,6 +246,20 @@
     mouse.targetY = -1000;
   }, { passive: true });
 
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      mouse.targetX = e.touches[0].clientX;
+      mouse.targetY = e.touches[0].clientY;
+      mouse.isActive = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    mouse.isActive = false;
+    mouse.targetX = -1000;
+    mouse.targetY = -1000;
+  }, { passive: true });
+
   // Update palette on theme toggle
   window.addEventListener('themeChanged', () => {
     palette = getThemePalette();
