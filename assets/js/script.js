@@ -31,6 +31,7 @@ const projectModalTags = document.querySelector("[data-project-modal-tags]");
 const projectModalDesc = document.querySelector("[data-project-modal-desc]");
 const projectModalLink = document.querySelector("[data-project-modal-link]");
 const projectModalBtnText = document.querySelector("[data-project-modal-btn-text]");
+const projectModalGallery = document.querySelector("[data-project-modal-gallery]");
 
 const openProjectModal = function (projectItem) {
   if (!projectModalContainer) return;
@@ -38,12 +39,14 @@ const openProjectModal = function (projectItem) {
   const title = projectItem.dataset.projectTitle || "Projet";
   const cat = projectItem.dataset.projectCategory || "Applications";
   const imgSrc = projectItem.dataset.projectImg || "";
+  const gallery = projectItem.dataset.projectGallery || "";
   const desc = projectItem.dataset.projectDesc || "";
   const tags = projectItem.dataset.projectTags || "";
   const link = projectItem.dataset.projectLink || "#";
-  const linkText = projectItem.dataset.projectLinkText || (currentLang === 'fr' ? "Voir le projet" : "View project");
+  const linkText = projectItem.dataset.projectLinkText || ((typeof currentLang !== 'undefined' && currentLang === 'fr') ? "Voir le projet" : "View project");
 
   if (projectModalImg) {
+    projectModalImg.style.opacity = "1";
     projectModalImg.src = imgSrc;
     projectModalImg.alt = title;
   }
@@ -62,6 +65,49 @@ const openProjectModal = function (projectItem) {
         span.textContent = tag;
         projectModalTags.appendChild(span);
       });
+    }
+  }
+
+  // Render interactive gallery thumbnails
+  if (projectModalGallery) {
+    projectModalGallery.innerHTML = "";
+    let galleryList = [];
+    if (gallery) {
+      galleryList = gallery.split(",").map(t => t.trim()).filter(Boolean);
+    } else if (imgSrc) {
+      galleryList = [imgSrc];
+    }
+
+    if (galleryList.length > 1) {
+      projectModalGallery.style.display = "flex";
+      galleryList.forEach((thumbSrc, index) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `project-modal-thumb ${index === 0 ? "active" : ""}`;
+        btn.setAttribute("aria-label", `Afficher vue ${index + 1}`);
+
+        const img = document.createElement("img");
+        img.src = thumbSrc;
+        img.alt = `${title} miniature ${index + 1}`;
+        img.loading = "lazy";
+        btn.appendChild(img);
+
+        btn.addEventListener("click", () => {
+          if (projectModalImg && projectModalImg.getAttribute("src") !== thumbSrc) {
+            projectModalImg.style.opacity = "0.2";
+            setTimeout(() => {
+              projectModalImg.src = thumbSrc;
+              projectModalImg.style.opacity = "1";
+            }, 100);
+          }
+          projectModalGallery.querySelectorAll(".project-modal-thumb").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+
+        projectModalGallery.appendChild(btn);
+      });
+    } else {
+      projectModalGallery.style.display = "none";
     }
   }
 
