@@ -6,6 +6,8 @@
 \*-----------------------------------*/
 
 :root {
+  color-scheme: light;
+
   /* ========================================================
      THÈME CLAIR "BLANC CASSÉ BLEUTÉ" (PAR DÉFAUT)
   ======================================================== */
@@ -70,6 +72,8 @@
    THÈME SOMBRE OPTIONNEL (ACTIVABLE VIA DATA-THEME="DARK")
 ======================================================== */
 [data-theme="dark"] {
+  color-scheme: dark;
+
   --bg-main: #121212;
   --bg-card: rgba(30, 30, 33, 0.76);
   --bg-card-secondary: rgba(33, 33, 36, 0.68);

@@ -262,27 +262,35 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // GESTION DU THÈME (Blanc Bleuté / Sombre)
 // ================================
 const themeToggleBtn = document.getElementById("themeToggle");
-const savedTheme = localStorage.getItem("portfolio-theme") || "light";
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+const savedTheme = localStorage.getItem("portfolio-theme");
 
-if (savedTheme === "dark") {
-  document.documentElement.setAttribute("data-theme", "dark");
-  if (themeToggleBtn) themeToggleBtn.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
-} else {
-  document.documentElement.removeAttribute("data-theme");
-  if (themeToggleBtn) themeToggleBtn.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
-}
+const applyTheme = function (theme) {
+  if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.innerHTML = theme === "dark"
+      ? '<ion-icon name="sunny-outline"></ion-icon>'
+      : '<ion-icon name="moon-outline"></ion-icon>';
+  }
+};
+
+applyTheme(savedTheme || (systemTheme.matches ? "dark" : "light"));
+
+systemTheme.addEventListener("change", function (event) {
+  if (!localStorage.getItem("portfolio-theme")) {
+    applyTheme(event.matches ? "dark" : "light");
+  }
+});
 
 function toggleTheme() {
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  if (isDark) {
-    document.documentElement.removeAttribute("data-theme");
-    localStorage.setItem("portfolio-theme", "light");
-    if (themeToggleBtn) themeToggleBtn.innerHTML = '<ion-icon name="moon-outline"></ion-icon>';
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("portfolio-theme", "dark");
-    if (themeToggleBtn) themeToggleBtn.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
-  }
+  const theme = isDark ? "light" : "dark";
+  localStorage.setItem("portfolio-theme", theme);
+  applyTheme(theme);
 }
 window.toggleTheme = toggleTheme;
-
