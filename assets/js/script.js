@@ -222,6 +222,24 @@ for (let i = 0; i < filterBtns.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formResponseFrame = document.querySelector(".form-response-frame");
+const formFeedback = document.querySelector("[data-form-feedback]");
+let formSubmissionPending = false;
+let formFeedbackTimeout;
+let formSubmissionTimeout;
+
+const showFormFeedback = function (message) {
+  if (!formFeedback) return;
+
+  formFeedback.textContent = message;
+  formFeedback.classList.add("active");
+  formFeedback.setAttribute("aria-hidden", "false");
+  window.clearTimeout(formFeedbackTimeout);
+  formFeedbackTimeout = window.setTimeout(function () {
+    formFeedback.classList.remove("active");
+    formFeedback.setAttribute("aria-hidden", "true");
+  }, 5000);
+};
 
 if (form && formBtn) {
   for (let i = 0; i < formInputs.length; i++) {
@@ -233,6 +251,40 @@ if (form && formBtn) {
       }
     });
   }
+
+  form.addEventListener("submit", function () {
+    formSubmissionPending = true;
+    formBtn.disabled = true;
+    window.clearTimeout(formSubmissionTimeout);
+    formSubmissionTimeout = window.setTimeout(function () {
+      if (!formSubmissionPending) return;
+
+      formSubmissionPending = false;
+      formBtn.disabled = !form.checkValidity();
+      showFormFeedback(
+        typeof currentLang !== "undefined" && currentLang === "en"
+          ? translations.en["form-error"]
+          : translations.fr["form-error"]
+      );
+    }, 20000);
+  });
+}
+
+if (form && formBtn && formResponseFrame) {
+  formResponseFrame.addEventListener("load", function () {
+    if (!formSubmissionPending) return;
+    if (formResponseFrame.contentDocument?.URL === "about:blank") return;
+
+    formSubmissionPending = false;
+    window.clearTimeout(formSubmissionTimeout);
+    form.reset();
+    formBtn.disabled = true;
+    showFormFeedback(
+      typeof currentLang !== "undefined" && currentLang === "en"
+        ? translations.en["form-success"]
+        : translations.fr["form-success"]
+    );
+  });
 }
 
 // ================================

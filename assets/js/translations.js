@@ -119,7 +119,9 @@ const translations = {
     "form-name": "Nom complet",
     "form-email": "Adresse email",
     "form-message": "Votre message",
-    "form-send": "Envoyer le message"
+    "form-send": "Envoyer le message",
+    "form-success": "Votre message a été transmis. Merci !",
+    "form-error": "L'envoi prend trop de temps. Vérifiez votre connexion et réessayez."
   },
 
   en: {
@@ -240,7 +242,9 @@ const translations = {
     "form-name": "Full name",
     "form-email": "Email address",
     "form-message": "Your message",
-    "form-send": "Send Message"
+    "form-send": "Send Message",
+    "form-success": "Your message has been submitted. Thank you!",
+    "form-error": "The submission is taking too long. Check your connection and try again."
   }
 };
 
